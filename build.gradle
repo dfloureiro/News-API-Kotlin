@@ -3,14 +3,16 @@
 buildscript {
     ext.kotlin_version = '1.1.51'
     ext.dokka_version = '0.9.15'
+    ext.android_maven_version = '2.0'
     repositories {
         google()
         jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_version}"
         classpath "org.jetbrains.dokka:dokka-android-gradle-plugin:${dokka_version}"
+        classpath "com.github.dcendents:android-maven-gradle-plugin:${android_maven_version}"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -26,4 +28,9 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+ext{
+    retrofit_version = '2.3.0'
+    rxjava2_version = '2.0.1'
 }
