@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/NewsAPIKotlin.iml" filepath="$PROJECT_DIR$/NewsAPIKotlin.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/newsapikotin/news-api-kotin.iml" filepath="$PROJECT_DIR$/newsapikotin/news-api-kotin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/newsapikotin/newsapikotin.iml" filepath="$PROJECT_DIR$/newsapikotin/newsapikotin.iml" />
     </modules>
   </component>
 </project>
