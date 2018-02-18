@@ -15,7 +15,7 @@ Add it in your root build.gradle at the end of repositories:
 Add the dependency:
 
 	dependencies {
-	        compile 'com.github.dfloureiro:news-api-kotlin:v1.0'
+	        compile 'com.github.dfloureiro:news-api-kotlin:v1.1'
 	}
 
 ### Maven:
@@ -32,14 +32,14 @@ Add the dependency:
 	<dependency>
 	    <groupId>com.github.dfloureiro</groupId>
 	    <artifactId>news-api-kotlin</artifactId>
-	    <version>v1.0</version>
+	    <version>v1.1</version>
 	</dependency>
 
 
 ### How to use examples:
 Create an instance of NewsApi:
 
-        val newsApi = NewsApi("apikey")
+        val newsApi = NewsApi("apikey", cacheDir)
         /*optional customizable parameters
         cacheMaxAgeSeconds, cacheMaxSize, readTimeOutSeconds, writeTimeoutSeconds
         /*
