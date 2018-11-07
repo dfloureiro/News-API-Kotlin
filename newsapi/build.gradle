@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxkoltin_version"
+    implementation "org.kodein.di:kodein-di-generic-jvm:$kodein_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+}

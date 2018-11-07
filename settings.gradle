@@ -1,1 +1,1 @@
-include ':app', ':newsapikotin'
+include ':app', ':newsapi'
