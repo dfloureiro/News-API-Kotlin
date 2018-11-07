@@ -1,7 +1,7 @@
-package com.example.newsapi.service
+package com.dfl.newsapi.service
 
-import com.example.newsapi.model.ArticlesDto
-import com.example.newsapi.model.SourcesDto
+import com.dfl.newsapi.model.ArticlesDto
+import com.dfl.newsapi.model.SourcesDto
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

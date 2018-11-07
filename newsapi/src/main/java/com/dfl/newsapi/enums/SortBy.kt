@@ -1,4 +1,4 @@
-package com.example.newsapi.enums
+package com.dfl.newsapi.enums
 
 /**
  * Created by loureiro on 13-02-2018.

@@ -1,4 +1,4 @@
-package com.example.newsapi.interceptor
+package com.dfl.newsapi.interceptor
 
 import okhttp3.Interceptor
 import okhttp3.Response

@@ -1,7 +1,7 @@
-package com.example.newsapi.di
+package com.dfl.newsapi.di
 
-import com.example.newsapi.service.NewsApiService
-import com.example.newsapi.interceptor.ApiKeyInterceptor
+import com.dfl.newsapi.service.NewsApiService
+import com.dfl.newsapi.interceptor.ApiKeyInterceptor
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import org.kodein.di.Kodein

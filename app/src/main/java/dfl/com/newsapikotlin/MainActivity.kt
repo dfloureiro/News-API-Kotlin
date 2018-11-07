@@ -3,11 +3,11 @@ package dfl.com.newsapikotlin
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import com.example.newsapi.NewsApiRepository
-import com.example.newsapi.enums.Category
-import com.example.newsapi.enums.Country
-import com.example.newsapi.enums.Language
-import com.example.newsapi.enums.SortBy
+import com.dfl.newsapi.NewsApiRepository
+import com.dfl.newsapi.enums.Category
+import com.dfl.newsapi.enums.Country
+import com.dfl.newsapi.enums.Language
+import com.dfl.newsapi.enums.SortBy
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 

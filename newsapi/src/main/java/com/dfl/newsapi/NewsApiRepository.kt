@@ -1,13 +1,13 @@
-package com.example.newsapi
+package com.dfl.newsapi
 
-import com.example.newsapi.di.Injector
-import com.example.newsapi.model.ArticlesDto
-import com.example.newsapi.model.SourcesDto
-import com.example.newsapi.service.NewsApiService
-import com.example.newsapi.enums.Category
-import com.example.newsapi.enums.Country
-import com.example.newsapi.enums.Language
-import com.example.newsapi.enums.SortBy
+import com.dfl.newsapi.di.Injector
+import com.dfl.newsapi.model.ArticlesDto
+import com.dfl.newsapi.model.SourcesDto
+import com.dfl.newsapi.service.NewsApiService
+import com.dfl.newsapi.enums.Category
+import com.dfl.newsapi.enums.Country
+import com.dfl.newsapi.enums.Language
+import com.dfl.newsapi.enums.SortBy
 import io.reactivex.Single
 
 class NewsApiRepository(apiKey: String) {
