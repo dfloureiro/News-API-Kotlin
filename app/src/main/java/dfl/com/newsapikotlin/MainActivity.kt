@@ -11,7 +11,7 @@ import com.dfl.newsapi.enums.SortBy
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
-class MainActivity : AppCompatActivity() {
+internal class MainActivity : AppCompatActivity() {
 
     private val compositeDisposable = CompositeDisposable()
 
