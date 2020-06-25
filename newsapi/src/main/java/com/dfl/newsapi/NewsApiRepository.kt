@@ -1,5 +1,6 @@
 package com.dfl.newsapi
 
+import com.dfl.newsapi.builder.NewsQuery
 import com.dfl.newsapi.di.Injector
 import com.dfl.newsapi.model.ArticlesDto
 import com.dfl.newsapi.model.SourcesDto
@@ -13,7 +14,7 @@ import io.reactivex.Single
 class NewsApiRepository(apiKey: String) {
 
     private val injector = Injector(apiKey)
-    private val newsApiService: NewsApiService by injector.instance()
+    private val newsApiService: NewsApiService by injector.instance<NewsApiService>()
 
     fun getSources(category: Category? = null, language: Language? = null, country: Country? = null): Single<SourcesDto> {
         return newsApiService.getSources(category?.value, language?.value, country?.value)
@@ -23,6 +24,22 @@ class NewsApiRepository(apiKey: String) {
                       to: String? = null, language: Language? = null, sortBy: SortBy? = null,
                       pageSize: Int = 20, page: Int = 1): Single<ArticlesDto> {
         return newsApiService.getEverything(q, sources, domains, from, to, language?.value, sortBy?.value, pageSize, page)
+    }
+    fun getEverything(q: NewsQuery? = null, sources: String? = null, domains: String? = null, from: String? = null,
+                      to: String? = null, language: Language? = null, sortBy: SortBy? = null,
+                      pageSize: Int = 20, page: Int = 1): Single<ArticlesDto>{
+        return newsApiService.getEverything(q.toString(), sources, domains, from, to, language?.value, sortBy?.value, pageSize, page)
+    }
+    fun getEverythingByTitle(q: String? = null, sources: String? = null, domains: String? = null, from: String? = null,
+                             to: String? = null, language: Language? = null, sortBy: SortBy? = null,
+                             pageSize: Int = 20, page: Int = 1): Single<ArticlesDto>{
+        return newsApiService.getEverythingByTitle(q, sources, domains, from, to, language?.value, sortBy?.value, pageSize, page)
+    }
+
+    fun getEverythingByTitle(q: NewsQuery? = null, sources: String? = null, domains: String? = null, from: String? = null,
+                             to: String? = null, language: Language? = null, sortBy: SortBy? = null,
+                             pageSize: Int = 20, page: Int = 1): Single<ArticlesDto>{
+        return newsApiService.getEverythingByTitle(q.toString(), sources, domains, from, to, language?.value, sortBy?.value, pageSize, page)
     }
 
     fun getTopHeadlines(category: Category? = null, country: Country? = null, q: String? = null, pageSize: Int = 20,
