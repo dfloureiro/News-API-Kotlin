@@ -16,6 +16,13 @@ internal interface NewsApiService {
                       @Query("to") to: String?, @Query("language") language: String?, @Query("sortBy") sortBy: String?,
                       @Query("pageSize") pageSize: Int?, @Query("page") page: Int?): Single<ArticlesDto>
 
+
+
+    @GET("/v2/everything")
+    fun getEverythingByTitle(@Query("qInTitle") q: String?, @Query("sources") sources: String?, @Query("domains") domains: String?, @Query("from") from: String?,
+                             @Query("to") to: String?, @Query("language") language: String?, @Query("sortBy") sortBy: String?,
+                             @Query("pageSize") pageSize: Int?, @Query("page") page: Int?): Single<ArticlesDto>
+
     @GET("/v2/top-headlines")
     fun getTopHeadlines(@Query("category") category: String?, @Query("country") country: String?,
                         @Query("sources") sources: String?, @Query("q") q: String?, @Query("pagesize") pageSize: Int?,
